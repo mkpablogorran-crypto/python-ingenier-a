@@ -1,0 +1,13 @@
+# Entorno virtual (se recrea con: python -m venv .venv)
+.venv/
+
+# Archivos generados por Python
+__pycache__/
+*.pyc
+
+# Configuración local de VS Code
+.vscode/
+
+# Archivos temporales de Office
+~$*
+HERRAMIENTAS.docx

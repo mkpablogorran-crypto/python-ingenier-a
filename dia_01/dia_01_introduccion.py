@@ -97,14 +97,43 @@ print()
 
 # TODO 1: Escribe un comentario que diga qué día del reto es hoy.
 
+# Hoy vamos a terminar con el día 1 y empezar con el día 2 del reto de Python en 30 días.
+
 # TODO 2: Con a = 3 y b = 4, imprime: suma, resta, multiplicación,
 #         división, resto, división entera y potencia (a ** b).
+
+a = 3
+b = 4
+
+print(f"Suma de a + b = {a+b}")
+print(f"Resta de a - b = {a-b}")
+print(f"Multiplicación de a * b = {a*b}")
+print(f"División entre a / b = {a/b}")
+print(f"Resto de a % b = {a%b}")
+print(f"División entera de a // b = {a//b}")
+print(f"Potencia de a ** b = {a**b}")
+print()
 
 # TODO 3: Crea variables con TU nombre, tu ingeniería/especialidad,
 #         y tu país, e imprímelas en una frase con un f-string.
 
+nombre = "Mikel Pablogorran Alcibar"
+ingeniería = "Ingeniería en Tecnología Industrial"
+país = "España"
+print()
+
+print(f"Mi nombre es {nombre} , estudio el Máster de {ingeniería} y vivo en {país}")
+print()
+
 # TODO 4: Comprueba con type() el tipo de estos valores:
 #         10, 9.8, 3.14, 4 - 4j, ['Asabeneh', 'Python'], tu nombre
+
+print(f"La variable 10 es de tipo {type(10).__name__}")
+print(f"La variable 9.8 es de tipo {type(9.8).__name__}")
+print(f"La variable 3.14 es de tipo {type(3.14).__name__}")
+print(f"La variable 4 - 4j es de tipo {type(4-4j).__name__}")
+print(f"La variable ['Asabeneh', 'Python'] es de tipo {type(['Asabeneh','Python']).__name__}")
+print()
 
 # --- Nivel 2 (ingeniería) ----------------------------------------
 
@@ -113,14 +142,43 @@ print()
 #         Calcula el área A = π·d²/4 (en mm²) y la tensión σ = N/A (en MPa).
 #         Pista: 1 kN = 1000 N, y N/mm² = MPa. Usa 3.14159 para π.
 
+A = 3.14159 * (20 **2) / 4
+N = 50 *1000 #Pasamos de Kn a N
+print()
+
+sigma = N / A #MPa
+print()
+
+print(f" El área de la superficie es de {A:.2f} mm^2 y la tensión axial que se ejerce sobre la barra es de {sigma:.2f} MPa")
+print()
+
 # TODO 6: Un circuito tiene R = 30 Ω y X = 40 Ω.
 #         Crea la impedancia compleja Z, e imprime |Z|, Z.real y Z.imag.
+
+Z = 30 + 40j
+
+print (f"El módulo de la impedancia Z = 30 + 40j es {abs(Z)}")
+print (f"La parte real de la impedancia Z = 30 + 40j es {Z.real}")
+print (f"La parte imaginaria de la impedancia Z = 30 + 40j es {Z.imag}")
+print()
 
 # --- Nivel 3 (reto) ----------------------------------------------
 
 # TODO 7: Calcula la longitud de una barra en 3D entre
 #         P1 = (0, 0, 0) y P2 = (3, 4, 12). (Resultado esperado: 13)
+longitud_3D = ((3-0)**2 + (4-0)**2 + (12-0)**2)**0.5
+print(f"La longitud de la barra en 3D entre P1 y P2 es {longitud_3D:.2f}")
+print()
 
 # TODO 8: Convierte a Python estas ecuaciones y evalúalas para x = 2:
 #         y = 2x - 2
 #         y = x² + 6x + 9
+
+x = 2
+y1 = 2*x - 2
+y2 = x**2 + 6*x + 9
+
+print(f"Para x = {x}, y = 2x - 2 = {y1}")
+print(f"Para x = {x}, y = x² + 6x + 9 = {y2}")
+
+print()

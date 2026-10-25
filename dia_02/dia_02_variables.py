@@ -110,10 +110,9 @@ print()
 # input() SIEMPRE devuelve texto (str), por eso hay que convertirlo.
 # Descomenta estas líneas para probarlo:
 
-# masa = float(input("Masa del cuerpo (kg): "))
-# peso = masa * G
-# print(f"Peso = {peso:.2f} N")
-
+masa = float(input("Masa del cuerpo (kg): "))
+peso = masa * G
+print(f"Peso = {peso:.2f} N")
 
 # =================================================================
 #  EJERCICIOS — Completa los TODO y ejecuta el archivo
@@ -125,12 +124,44 @@ print()
 #         (uniendo los dos anteriores con un f-string), ciudad,
 #         edad, y una variable booleana estudias_master.
 #         Imprímelas todas.
+print()
+
+nombre = "Mikel"
+apellidos = "Pablogorran Alcibar"
+
+nombre_completo = f"{nombre} {apellidos}"
+
+ciudad = "Bilbao"
+edad = 20
+estudiar_master = True
+
+print(f"Nombre completo = {nombre_completo}")
+print(f"Ciudad = {ciudad}")
+print(f"edad = {edad}")
+print(f"estudiar_master = {estudiar_master }")
+
+print()
 
 # TODO 2: Declara en UNA sola línea tres variables con las
 #         dimensiones de un depósito: largo = 4, ancho = 2.5, alto = 3 (m).
 #         Calcula e imprime su volumen en m³ y en litros.
 
+largo, ancho, alto = 4, 2.4, 3
+volumen = ancho * largo * alto 
+
+print(f" El volumen en m^3 es de {volumen:.2f} y el volumen en litros es de {volumen * 1000:.2f}")
+
 # TODO 3: Comprueba con type() el tipo de todas las variables del TODO 1.
+print()
+
+print(f"La variable nombre es de tipo: {type(nombre).__name__}")
+print(f"La variable apellidos es de tipo {type(apellidos).__name__}")
+print(f"La variable nombre_completo es de tipo {type(nombre_completo).__name__}")
+print(f" La variable ciudad es de tipo {type(ciudad).__name__}")
+print(f"La variable edad es de tipo {type(edad).__name__}")
+print(f"La variable estudiar_master es de tipo {type(estudiar_master).__name__}")
+
+print()
 
 # --- Nivel 2 (ingeniería) ----------------------------------------
 
@@ -140,18 +171,40 @@ print()
 #         Imprime: nº de medidas, mínima, máxima, media (2 decimales)
 #         y el rango (máx - mín).
 
+temps = [78.2, 80.5, 79.1, 83.4, 81.0, 77.6, 82.2]
+
+print(f"El número de medidas es de {len(temps)}")
+print(f"La medida mas pequeña es de {min(temps)}")
+print(f"La medida mas grande es de {max(temps)}")
+
+media = sum(temps)/len(temps)
+
+print(f"La media de las temperaturas medidas es de {round(media,2)}")
+
+print(f"El rango de las temperatura medidas es de {max(temps) - min(temps)}")
+print()
 # TODO 5: Un eje macizo de diámetro d = 40 mm.
 #         Calcula su área y su perímetro usando math.pi
 #         (recuerda: import math, al principio del todo o justo aquí).
 #         Imprime ambos con 2 decimales.
 
+import math
+
+d = 40 
+
+A = math.pi * (d)**2 / 4
+P = 2 * math.pi * d / 2
+
+print(f"El área de la superficie es de ! = {A:.2f} mm^2 y el perimetro de la superficie es de P = {P:.2f} mm")
+print()
+
 # TODO 6: ¿Qué imprime cada línea? Piénsalo ANTES de ejecutarlo,
 #         escribe tu predicción en un comentario y luego compruébalo:
-#             print(int(9.99))
-#             print(round(9.99))
-#             print(len("Hormigón HA-25"))
-#             print(float("3") + 2)
-#             print("3" + "2")
+print(int(9.99)) #(9)
+print(round(9.99)) #(10)
+print(len("Hormigón HA-25")) #(14)
+print(float("3") + 2) #(5)
+print("3" + "2") #("32")
 
 # --- Nivel 3 (reto) ----------------------------------------------
 
@@ -161,3 +214,12 @@ print()
 #         donde ω = 2·π·n / 60  (rad/s) y P en W.
 #         Imprime el par en N·m con 1 decimal.
 #         Prueba con P = 15 kW, n = 1450 rpm  (resultado ≈ 98.8 N·m)
+
+P = float(input("La potencia del motor en KW es: "))
+n = float(input("La velocidad del motor en rpm es: "))
+
+w = 2 * math.pi * n / 60
+
+T = P * 1000 / w
+
+print(f"El Par motor en es de {T:.1f} N·m")

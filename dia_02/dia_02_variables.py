@@ -149,7 +149,7 @@ print()
 largo, ancho, alto = 4, 2.4, 3
 volumen = ancho * largo * alto 
 
-print(f" El volumen en m^3 es de {volumen:.2f} y el volumen en litros es de {volumen * 1000:.2f}")
+print(f"El volumen en m^3 es de {volumen:.2f} y el volumen en litros es de {volumen * 1000:.2f}")
 
 # TODO 3: Comprueba con type() el tipo de todas las variables del TODO 1.
 print()
@@ -157,7 +157,7 @@ print()
 print(f"La variable nombre es de tipo: {type(nombre).__name__}")
 print(f"La variable apellidos es de tipo {type(apellidos).__name__}")
 print(f"La variable nombre_completo es de tipo {type(nombre_completo).__name__}")
-print(f" La variable ciudad es de tipo {type(ciudad).__name__}")
+print(f"La variable ciudad es de tipo {type(ciudad).__name__}")
 print(f"La variable edad es de tipo {type(edad).__name__}")
 print(f"La variable estudiar_master es de tipo {type(estudiar_master).__name__}")
 
@@ -181,7 +181,7 @@ media = sum(temps)/len(temps)
 
 print(f"La media de las temperaturas medidas es de {round(media,2)}")
 
-print(f"El rango de las temperatura medidas es de {max(temps) - min(temps)}")
+print(f"El rango de las temperatura medidas es de {round(max(temps) - min(temps),2)}")
 print()
 # TODO 5: Un eje macizo de diámetro d = 40 mm.
 #         Calcula su área y su perímetro usando math.pi
@@ -195,7 +195,7 @@ d = 40
 A = math.pi * (d)**2 / 4
 P = 2 * math.pi * d / 2
 
-print(f"El área de la superficie es de ! = {A:.2f} mm^2 y el perimetro de la superficie es de P = {P:.2f} mm")
+print(f"El área de la superficie es de = {A:.2f} mm^2 y el perimetro de la superficie es de P = {P:.2f} mm")
 print()
 
 # TODO 6: ¿Qué imprime cada línea? Piénsalo ANTES de ejecutarlo,

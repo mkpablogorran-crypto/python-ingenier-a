@@ -149,7 +149,7 @@ print()
 sigma = N / A #MPa
 print()
 
-print(f" El área de la superficie es de {A:.2f} mm^2 y la tensión axial que se ejerce sobre la barra es de {sigma:.2f} MPa")
+print(f"El área de la superficie es de {A:.2f} mm^2 y la tensión axial que se ejerce sobre la barra es de {sigma:.2f} MPa")
 print()
 
 # TODO 6: Un circuito tiene R = 30 Ω y X = 40 Ω.
